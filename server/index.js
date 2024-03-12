@@ -23,6 +23,7 @@ mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluster0.dlkxxnw
 })
 .catch(err => {
     console.error('Error connecting to MongoDB:', err);
+    res.end(" can not connected to mongodb");
 });
 
 
