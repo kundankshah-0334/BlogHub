@@ -31,7 +31,7 @@ function CreatePost() {
 
     async function createNewPost (e) {
         const data = new FormData();
-        data.set('title' , title);
+        data.set('title' , title);  
         data.set('summary' , summary);
         data.set('content' , content);
         data.set('file' , files[0]);

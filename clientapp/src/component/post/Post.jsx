@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { compareAsc, format , formatISO9075 } from 'date-fns'
 import { Link } from 'react-router-dom'
 
-function Post({_id , title , summary , cover , content , createdAt , author}) {
+function Post({_id , title , summary , cover , createdAt , author}) {
 
   return (
     <>

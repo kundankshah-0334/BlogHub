@@ -3,7 +3,6 @@ import Navbar from '../component/Navbar/Navbar'
 import ReactQuill from "react-quill"
 import { Navigate , useParams} from 'react-router-dom';
 
-
 const modules = {
     toolbar: [
       [{ 'header': [1, 2, false] }],
