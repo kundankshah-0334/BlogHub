@@ -13,7 +13,8 @@ const Post = require("./Model/PostModel.js")
 
 app.use('/uploads' , express.static(__dirname + '/uploads'));
 const secret = "skdrfuhq43r732hef734gyu8234sdfvsdfgsdfsdfgsdf4";
-mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluster0.dlkxxnw.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluster0.dlkxxnw.mongodb.net/", {
+    
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
