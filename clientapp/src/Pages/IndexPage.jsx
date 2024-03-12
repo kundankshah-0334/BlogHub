@@ -18,6 +18,10 @@ function IndexPage() {
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
+            console.log("error 123")
+          }
+          else{
+            console.log("error 12345")
           }
           return response.json();
         })
