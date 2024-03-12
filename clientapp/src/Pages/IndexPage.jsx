@@ -25,7 +25,7 @@ function IndexPage() {
           SetPosts(posts);
         })
         .catch(error => {
-          console.error('Fetch error:', error);
+          console.error(error);
           // Handle the error accordingly, e.g., show an error message to the user
         });
     }, []);

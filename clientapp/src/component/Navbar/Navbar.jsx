@@ -7,15 +7,35 @@ function Navbar() {
 
 
   const [username , SetUsername] = useState(null);
+  // useEffect(() => {
+  //   fetch('https://blog-hub-api.vercel.app/profile', {
+  //     credentials : 'include',
+  //   }).then(responce => {
+  //     responce.json().then(userInfo => {
+  //       SetUsername(userInfo.username);
+  //     })
+  //   })
+  // } , [])
+
   useEffect(() => {
     fetch('https://blog-hub-api.vercel.app/profile', {
-      credentials : 'include',
-    }).then(responce => {
-      responce.json().then(userInfo => {
-        SetUsername(userInfo.username);
-      })
+      credentials: 'include',
     })
-  } , [])
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(userInfo => {
+        setUsername(userInfo.username);
+      })
+      .catch(error => {
+        console.log(error);
+        // Handle the error accordingly, e.g., show an error message to the user
+      });
+  }, []);
+ 
 
   function logout () {
     fetch('https://blog-hub-api.vercel.app/logout' , {
