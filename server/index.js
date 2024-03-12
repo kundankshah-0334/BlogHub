@@ -30,7 +30,7 @@ const a = mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluste
 });
 console.log(a);
 
-app.use(cors({credentials : true , origin : "https://blog-hub-api.vercel.app/"}));
+app.use(cors({credentials : true , origin : "https://blog-hub-api.vercel.app"}));
 app.use(express.json());
 app.use(cookieParser());
 var salt = bcrypt.genSaltSync(10);
