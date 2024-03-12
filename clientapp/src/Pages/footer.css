@@ -1,0 +1,11 @@
+.footer {
+    background-color: #343a40; /* Choose a background color for your footer */
+    color: #ffffff; /* Choose a text color for your footer */
+    padding: 5px 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    /* min-height: 500px; */
+    margin-top: 40px;
+    
+  }
