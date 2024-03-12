@@ -25,7 +25,7 @@ mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluster0.dlkxxnw
 });
 
 
-app.use(cors({credentials : true , origin : "http://localhost:3000"}));
+app.use(cors({credentials : true , origin : "https://blog-hub-api.vercel.app/"}));
 app.use(express.json());
 app.use(cookieParser());
 var salt = bcrypt.genSaltSync(10);
