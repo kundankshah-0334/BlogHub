@@ -37,7 +37,7 @@ function CreatePost() {
         data.set('file' , files[0]);
         e.preventDefault();
 
-        const responce = await fetch('https://blog-web-api.vercel.app/post' , {
+        const responce = await fetch('https://blog-hub-api.vercel.app/post' , {
             method:'POST',
             body:data,
             credentials : 'include',

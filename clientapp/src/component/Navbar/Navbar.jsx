@@ -8,7 +8,7 @@ function Navbar() {
 
   const [username , SetUsername] = useState(null);
   useEffect(() => {
-    fetch('https://blog-web-api.vercel.app/profile', {
+    fetch('https://blog-hub-api.vercel.app/profile', {
       credentials : 'include',
     }).then(responce => {
       responce.json().then(userInfo => {
@@ -18,7 +18,7 @@ function Navbar() {
   } , [])
 
   function logout () {
-    fetch('https://blog-web-api.vercel.app/logout' , {
+    fetch('https://blog-hub-api.vercel.app/logout' , {
       method: 'POST',
       credentials : 'include',
     });
@@ -30,7 +30,7 @@ function Navbar() {
     <div className='main'>
       <nav class="navbar navbar-expand-lg  background-navbar-change">
         <div class="container-fluid">
-            <Link class="navbar-brand" to="/">MyBlog</Link>
+            <Link class="navbar-brand" to="/">BlogHub</Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>

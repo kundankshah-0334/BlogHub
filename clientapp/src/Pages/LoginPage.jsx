@@ -11,7 +11,7 @@ function LoginPage() {
      async function login(e){
    
       e.preventDefault();
-      const responce = await fetch("https://blog-web-api.vercel.app/login" ,{
+      const responce = await fetch("https://blog-hub-api.vercel.app/login" ,{
       method: "POST",
       body : JSON.stringify({username , password}),
       headers : {'Content-Type':'application/json'},

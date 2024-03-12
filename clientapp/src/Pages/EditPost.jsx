@@ -33,7 +33,7 @@ function EditPost() {
     const [files , SetFiles] = useState('');
 
     useEffect(() => {
-        fetch("https://blog-web-api.vercel.app/post/" + id)
+        fetch("https://blog-hub-api.vercel.app/post/" + id)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -63,7 +63,7 @@ function EditPost() {
             data.set('file' , files?.[0]);
         }
 
-        const response = await fetch("https://blog-web-api.vercel.app/post", {
+        const response = await fetch("https://blog-hub-api.vercel.app/post", {
           method: 'PUT',
           body: data,
           credentials: 'include',
