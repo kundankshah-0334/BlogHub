@@ -10,7 +10,7 @@ function Post({_id , title , summary , cover , content , createdAt , author}) {
      <div className='post'>
         <div className='images'>
         <Link to={`/post/${_id}`}>
-            <img src={'http://localhost:8000/'+cover} class="card-img-top" alt="..." />
+            <img src={'https://blog-web-api.vercel.app/'+cover} class="card-img-top" alt="..." />
         </Link>
         </div>
         <div className='texts'>

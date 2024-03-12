@@ -13,7 +13,7 @@ function RegisterPage() {
      async function register(e){
     
       e.preventDefault();
-      const responce = await fetch("http://localhost:8000/register" ,{
+      const responce = await fetch("https://blog-web-api.vercel.app/register" ,{
       method: "POST",
       body : JSON.stringify({username , password}),
       headers : {'Content-Type':'application/json'},

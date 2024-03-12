@@ -8,7 +8,7 @@ function LoginNavBar() {
 
   const [username , SetUsername] = useState(null);
   useEffect(() => {
-    fetch('http://localhost:8000/profile', {
+    fetch('https://blog-web-api.vercel.app/profile', {
       credentials : 'include',
     }).then(responce => {
       responce.json().then(userInfo => {
@@ -18,7 +18,7 @@ function LoginNavBar() {
   } , [])
 
   function logout () {
-    fetch('http://localhost:8000/logout' , {
+    fetch('https://blog-web-api.vercel.app/logout' , {
       method: 'POST',
       credentials : 'include',
     });

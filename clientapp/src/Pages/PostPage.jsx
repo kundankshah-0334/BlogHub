@@ -8,7 +8,7 @@ function PostPage() {
     const [postInfo , SetPostInfo] = useState(null);
 const {id} = useParams();
 useEffect(() => {
-    fetch(`http://localhost:8000/post/${id}`)
+    fetch(`https://blog-web-api.vercel.app/post/${id}`)
     .then(response => {
         response.json().then(postInfo => {
         SetPostInfo(postInfo);
@@ -19,7 +19,7 @@ useEffect(() => {
 
     const [userid , SetUsername] = useState(null);
     useEffect(() => {
-      fetch('http://localhost:8000/profile', {
+      fetch('https://blog-web-api.vercel.app/profile', {
         credentials : 'include',
       }).then(responce => {
         responce.json().then(userInfo => {
@@ -53,7 +53,7 @@ useEffect(() => {
         )
         }
         <div className='post-image'>
-        <img src={`http://localhost:8000/${postInfo.cover}`} alt='Loading....' />
+        <img src={`https://blog-web-api.vercel.app/${postInfo.cover}`} alt='Loading....' />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postInfo.content}} />
     </div>
