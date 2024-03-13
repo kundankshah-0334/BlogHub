@@ -25,7 +25,7 @@ const secret = "skdrfuhq43r732hef734gyu8234sdfvsdfgsdfsdfgsdf4";
     console.error('Error connecting to MongoDB:', err);
 });
 
-app.use(cors({credentials : true , origin : "https://blog-hub-api.vercel.app"}));
+app.use(cors({credentials : true , origin : "https://blog-hub-vert.vercel.app"}));
 app.use(express.json());
 app.use(cookieParser());
 var salt = bcrypt.genSaltSync(10);
@@ -169,9 +169,9 @@ jwt.verify(token, secret, {}, async (err, info) => {
 });
 });
 
-app.listen(PORT , () => {
-    console.log(`Server is runnig on ${PORT} number.`)
-})
+// app.listen(PORT , () => {
+//     console.log(`Server is runnig on ${PORT} number.`)
+// })
 
 
 
