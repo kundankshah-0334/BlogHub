@@ -13,7 +13,7 @@ const Post = require("./Model/PostModel.js")
 
 app.use('/uploads' , express.static(__dirname + '/uploads'));
 const secret = "skdrfuhq43r732hef734gyu8234sdfvsdfgsdfsdfgsdf4";
-const a = mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluster0.dlkxxnw.mongodb.net/", {
+ mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluster0.dlkxxnw.mongodb.net", {
     
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -24,7 +24,6 @@ const a = mongoose.connect("mongodb+srv://kundanlal96580:P3kFgKWNGvqxDB8k@cluste
 .catch(err => {
     console.error('Error connecting to MongoDB:', err);
 });
-console.log(a);
 
 app.use(cors({credentials : true , origin : "https://blog-hub-api.vercel.app"}));
 app.use(express.json());
